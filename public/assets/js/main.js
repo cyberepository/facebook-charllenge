@@ -47,19 +47,44 @@
 				}
 			});
 			
-			$('#connect-button')
+			$('#submit_login')
 				.click(function(e) {
+					e.preventDefault();
+					var username = $( "input:first" ).val()
 					$.ajax({ 
-					   type: "GET",
-					   url: "http://localhost:3000/rest/",
+					   type: "POST",
+					   url: "http://localhost:3000/rest/login",
+						 contentType: "application/json",
+    		 		 dataType: "json",
+						 data: JSON.stringify({ "user": username }),
 					   success: function(data){        
 					     console.log(data);
 					   },
-						 error: function(data){        
-					     console.error(data);
+						 error: function(data){ 
+							 if (data.statusText == "OK") {
+								 window.location.replace("search.html");
+								 return;
+							 }
+							 console.log('error');     
+					     console.log(data);
 					   }
 					});
 				})
+				
+				$( document ).ready(function() {
+				    if(window.location.pathname == "/search.html") {
+							$.ajax({ 
+							   type: "GET",
+							   url: "http://localhost:3000/rest/getuser",
+							   success: function(data){
+									 console.log(data);
+									 var e = $('<div>Hello '+data+'</div>');
+							   	$('#hello-message').append(e);
+							   }
+							});
+						}
+				});
+				
 
 		// Menu.
 			$('#menu')
