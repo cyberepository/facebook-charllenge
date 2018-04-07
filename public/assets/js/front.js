@@ -66,8 +66,6 @@
                 });
             })
 
-        document.getElementById("title1").innerHTML = "title";
-
         $(document).ready(function() {
             if (window.location.pathname == "/chose.html") {
                 $.ajax({
@@ -128,7 +126,11 @@
                         $.get("../sectionTemplate.html", function(html_string){
                           var template = html_string;
                           Mustache.parse(template);   // optional, speeds up future uses
-                          var rendered = Mustache.render(template, results[0]);
+                          var rendered = "";
+                          for (var i = 0; i < results.length; i++)  {
+                            rendered += Mustache.render(template, results[i]);
+                          }
+                          
                           $('#target').html(rendered);
                          },'html');
                     }
