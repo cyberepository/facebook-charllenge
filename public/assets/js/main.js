@@ -46,20 +46,6 @@
 					return $header.height();
 				}
 			});
-			
-			$('#connect-button')
-				.click(function(e) {
-					$.ajax({ 
-					   type: "GET",
-					   url: "http://localhost:3000/rest/",
-					   success: function(data){        
-					     console.log(data);
-					   },
-						 error: function(data){        
-					     console.error(data);
-					   }
-					});
-				})
 
 		// Menu.
 			$('#menu')
