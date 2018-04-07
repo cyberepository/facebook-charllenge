@@ -487,6 +487,6 @@
     imagesLoaded(document.querySelectorAll('img'), () => {
         document.body.classList.remove('loading');
         // Init
-        new Slideshow(document.querySelector('.sections'));
+        //new Slideshow(document.querySelector('.sections'));
     });
 };

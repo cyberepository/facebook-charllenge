@@ -1,5 +1,7 @@
 var express = require('express');
 var fs = require('fs');
+var request = require('request');
+
 var router = express.Router();
 
 var username_base = __dirname+"/username.txt"
@@ -35,9 +37,13 @@ router.get('/getuser', function(req, res) {
 });
 
 router.post('/search', function(req, res) {
-    //connect server python
-    // recuper nouvelle 
-    //res.send('/login.');
+  request('http://localhost:5000/recomendation?user='+req.body.user,
+  function (error, response, body) {
+    if (!error && response.statusCode == 200) {
+      console.log(body)
+      res.send(body);
+    }
+  })
 });
 
 
