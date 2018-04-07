@@ -66,6 +66,8 @@
                 });
             })
 
+        document.getElementById("title1").innerHTML = "title";
+
         $(document).ready(function() {
             if (window.location.pathname == "/chose.html") {
                 $.ajax({
