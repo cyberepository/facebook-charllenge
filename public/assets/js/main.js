@@ -79,7 +79,57 @@
 							   success: function(data){
 									 console.log(data);
 									 var e = $('<div>Hello '+data+'</div>');
-							   	$('#hello-message').append(e);
+							   	 $('#hello-message').append(e);
+									 
+									 $('#loadingDiv')
+								    .hide()  // Hide it initially
+								    .ajaxStart(function() {
+								        $(this).show();
+								    })
+								    .ajaxStop(function() {
+								        $(this).hide();
+								    });
+										
+										var results = [
+											{
+												"plat": "plat1", 
+												"ingredient":["potato","salt"], 
+												"calory":99,
+												"sante":2,
+												"facilite":3,
+												"temps": 30
+											},
+											{
+												"plat": "plat2", 
+												"ingredient":["fish","and","chips"], 
+												"calory":399,
+												"sante":1,
+												"facilite":2,
+												"temps": 42
+											},
+											{
+												"plat": "plat3", 
+												"ingredient":["fromage"], 
+												"calory":299,
+												"sante":1,
+												"facilite":2,
+												"temps": 5
+											}
+										];
+										
+									 for(var i = 0; i<results.length; i++) {
+										 var recept = results[i];
+										 var e = $(
+											 '<tr > '+
+										 			'<td> Recept '+ recept.plat +'</td>' +
+													'<td> Ingredients '+ recept.ingredient +'</td>' +
+													'<td> Calorys '+ recept.calory +'</td>' +
+													'<td> Level of healthy '+ recept.sante +'</td>' +
+													'<td> Level of hardness '+ recept.facilite +'</td>' +
+													'<td> Time to prepare'+ recept.temps +'</td>' +
+												'</tr>');
+								   	 $('#results').append(e);
+									 }
 							   }
 							});
 						}
