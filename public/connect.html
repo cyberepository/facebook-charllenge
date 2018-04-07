@@ -7,44 +7,99 @@
 <html>
 
 <head>
-    <title>Connect</title>
+    <title>Get cooked</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 
-<body>
+<body class="subpage" style="overflow:hidden">
 
-    <h1>Welcome!</h1>
-    <form action="">
-      <h3>Please give basic informations</h3>
-      First name:<br>
-      <input type="text" name="firstname" value="Mickey">
-      <br>
-      Last name:<br>
-      <input type="text" name="lastname" value="Mouse">
-      <br><br>
-      <h3>What kind of food you like? </h3>
-      <p>Ici on pourrais mettre un input form jolie pour les plats</p>
-      <input type="submit" value="Submit">
-    </form> 
-    
-    <!-- Footer -->
-    <footer id="footer">
-        <div class="inner">
-            <h2>Get In Touch</h2>
-            <ul class="actions">
-                <li><span class="icon fa-phone"></span> <a href="#">(000) 000-0000</a></li>
-                <li><span class="icon fa-envelope"></span> <a href="#">information@untitled.tld</a></li>
-                <li><span class="icon fa-map-marker"></span> 123 Somewhere Road, Nashville, TN 00000</li>
-            </ul>
+    <!-- Banner -->
+    <section class="hide-on-med-and-down" id="banner" style="height:100%">
+        <div class="content">
+            <div class="row">
+                <form class="col s8 offset-s2" style="border-radius:10px;background-color:white">
+                    <div class="row col s12" style="text-align:center;position:relative;margin-top:20px;margin-bottom:80px">
+                        <h1 style="position:absolute;left:50%;transform:translateX(-50%)">Connection</h1>
+                    </div>
+                    <div class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="email" type="text" name="email">
+                                <label for="email" data-error="wrong" data-success="right">Email</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row col s12">
+                        <div class="input-field col s12">
+                            <input id="password" type="text" name="password">
+                            <label for="password">Password</label>
+                        </div>
+                    </div>
+                    <!-- Switch -->
+                    <div class="switch col s6 offset-s3">
+                        <label for="email" data-error="wrong" data-success="right">Ce souvenir de moi ?</label>
+                        <label>
+						  Off
+		  				<input type="checkbox">
+						<span class="lever"></span>
+		  					On
+						</label>
+                    </div>
+                    <div class="row col s12" style="text-align:center;position:relative;margin-top:50px">
+                        <input type="submit" value="Submit" style="position:absolute;left:50%;transform:translate(-50%)">
+                    </div>
+                </form>
+            </div>
         </div>
-        <div class="copyright">
-            &copy; Untitled. Design <a href="https://templated.co">TEMPLATED</a>. Images <a href="https://unsplash.com">Unsplash</a>.
-        </div>
-    </footer>
+    </section>
 
+    <!-- Banner -->
+    <section class="hide-on-big-only" id="banner" style="height:100%;padding-left:10px;padding-right:10px">
+        <div class="content">
+            <div class="row">
+                <form class="col s12" style="border-radius:10px;background-color:white">
+                    <div class="row col s12" style="text-align:center;margin-top:20px;margin-bottom:80px;position:relative">
+                        <h1 class="col s6 offset-s3" style="transform:translateX(-50%);left:50%;position:absolute">Connection</h1>
+                    </div>
+                    <div class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="email" type="text" name="email">
+                                <label for="email" data-error="wrong" data-success="right">Email</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row col s12">
+                        <div class="input-field col s12">
+                            <input id="password" type="text" name="password">
+                            <label for="password">Password</label>
+                        </div>
+                    </div>
+                    <!-- Switch -->
+                    <div class="switch col s6 offset-s3">
+                        <label for="email" data-error="wrong" data-success="right">Ce souvenir de moi ?</label>
+                        <label>
+							  Off
+							  <input type="checkbox">
+							<span class="lever"></span>
+								  On
+							</label>
+                    </div>
+                    <div class="row col s12" style="text-align:center;position:relative;margin-top:50px">
+                        <input type="submit" value="Submit" style="position:absolute;left:50%;transform:translate(-50%)">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
     <!-- Scripts -->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
     <script src="assets/js/skel.min.js"></script>
