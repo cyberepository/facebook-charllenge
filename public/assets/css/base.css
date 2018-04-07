@@ -275,7 +275,7 @@ button:focus {
     padding: 2rem;
     margin: 0;
     list-style: none;
-    background: var(--color-bg-facts);
+    background: #f6755e;
     color: var(--color-text-facts);
 }
 
