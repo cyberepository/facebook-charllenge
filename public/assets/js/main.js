@@ -89,11 +89,11 @@
 								    .ajaxStop(function() {
 								        $(this).hide();
 								    });
+										//connect server node et recuper le prochaine
 										
 										var results = [
 											{
 												"plat": "plat1", 
-												"ingredient":["potato","salt"], 
 												"calory":99,
 												"sante":2,
 												"facilite":3,
@@ -101,7 +101,6 @@
 											},
 											{
 												"plat": "plat2", 
-												"ingredient":["fish","and","chips"], 
 												"calory":399,
 												"sante":1,
 												"facilite":2,
@@ -109,7 +108,6 @@
 											},
 											{
 												"plat": "plat3", 
-												"ingredient":["fromage"], 
 												"calory":299,
 												"sante":1,
 												"facilite":2,
@@ -122,7 +120,6 @@
 										 var e = $(
 											 '<tr > '+
 										 			'<td> Recept '+ recept.plat +'</td>' +
-													'<td> Ingredients '+ recept.ingredient +'</td>' +
 													'<td> Calorys '+ recept.calory +'</td>' +
 													'<td> Level of healthy '+ recept.sante +'</td>' +
 													'<td> Level of hardness '+ recept.facilite +'</td>' +
