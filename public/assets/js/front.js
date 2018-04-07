@@ -56,7 +56,7 @@
                     },
                     error: function(data) {
                         if (data.statusText == "OK") {
-                            window.location.replace("search.html");
+                            window.location.replace("discover.html");
                             return;
                         }
                         console.log('error');
@@ -64,8 +64,6 @@
                     }
                 });
             })
-
-        document.getElementById("title1").innerHTML = "title";
 
         $(document).ready(function() {
             if (window.location.pathname == "/search.html") {
