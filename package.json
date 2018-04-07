@@ -1,0 +1,22 @@
+{
+  "name": "facebook-charllenge",
+  "version": "1.0.0",
+  "description": "\"# facebook-charllenge\"",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cyberepository/facebook-charllenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cyberepository/facebook-charllenge/issues"
+  },
+  "homepage": "https://github.com/cyberepository/facebook-charllenge#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
