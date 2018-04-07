@@ -15,8 +15,6 @@
         };
     };
 
-    document.getElementById("title1").innerHTML = "lol";
-
     // Window size.
     let win = { width: window.innerWidth, height: window.innerHeight };
 

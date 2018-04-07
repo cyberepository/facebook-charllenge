@@ -108,27 +108,18 @@
                                 "temps": 5
                             }
                         ];
-                        /*
-                        for (var i = 0; i < results.length; i++) {
-                            var recept = results[i];
-                            var e = $(
-                                '<tr > ' +
-                                '<td> Recept ' + recept.plat + '</td>' +
-                                '<td> Calorys ' + recept.calory + '</td>' +
-                                '<td> Level of healthy ' + recept.sante + '</td>' +
-                                '<td> Level of hardness ' + recept.facilite + '</td>' +
-                                '<td> Time to prepare' + recept.temps + '</td>' +
-                                '</tr>');
-                            $('#results').append(e);
-                        }*/
-
-
-                        $.get("../sectionTemplate.html", function(html_string) {
-                            var template = html_string;
-                            Mustache.parse(template); // optional, speeds up future uses
-                            var rendered = Mustache.render(template, results[0]);
-                            $('#target').html(rendered);
-                        }, 'html');
+                        
+                        
+                        $.get("../sectionTemplate.html", function(html_string){
+                          var template = html_string;
+                          Mustache.parse(template);   // optional, speeds up future uses
+                          var rendered = "";
+                          for (var i = 0; i < results.length; i++)  {
+                            rendered += Mustache.render(template, results[i]);
+                          }
+                          
+                          $('#target').html(rendered);
+                         },'html');
                     }
                 });
             }
