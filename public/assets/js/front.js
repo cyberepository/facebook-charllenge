@@ -7,7 +7,7 @@
         small: '(max-width: 736px)',
         xsmall: '(max-width: 480px)'
     });
-
+    //username = ''
     $(function() {
 
         var $window = $(window),
@@ -46,6 +46,7 @@
                 console.log('jou')
                 e.preventDefault();
                 var username = $("input:first").val()
+                console.log('username : ' + username);
                 $.ajax({
                     type: "POST",
                     url: "http://localhost:3000/rest/login",
@@ -72,7 +73,7 @@
                     type: "GET",
                     url: "http://localhost:3000/rest/getuser",
                     success: function(data) {
-                        console.log(data);
+                        username = data;
                         var e = $('<div>Hello ' + data + '</div>');
                         $('#hello-message').append(e);
 
@@ -84,9 +85,8 @@
                             .ajaxStop(function() {
                                 $(this).hide();
                             });
-                        //connect server node et recuper le prochaine
 
-                        var results = [{
+                        /* var results = [{
                                 "plat": "plat1",
                                 "calory": 99,
                                 "sante": 2,
@@ -120,6 +120,29 @@
 
                             $('#target').html(rendered);
                         }, 'html');
+                    } */
+
+                        $.ajax({
+                            type: "POST",
+                            url: "http://localhost:3000/rest/search",
+                            contentType: "application/json",
+                            dataType: "json",
+                            data: JSON.stringify({ "user": username }),
+                            success: function(results) {
+
+                                $.get("../sectionTemplate.html", function(html_string) {
+                                    var template = html_string;
+                                    Mustache.parse(template); // optional, speeds up future uses
+                                    var rendered = "";
+                                    for (var i = 0; i < results.length; i++) {
+                                        rendered += Mustache.render(template, results[i]);
+                                    }
+                                    //console.log(rendered);
+                                    $('#target').html(rendered);
+                                }, 'html');
+
+                            }
+                        });
                     }
                 });
             }
