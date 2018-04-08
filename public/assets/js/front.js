@@ -57,7 +57,7 @@
                     },
                     error: function(data) {
                         if (data.statusText == "OK") {
-                            window.location.replace("chose.html");
+                            window.location.replace("discover.html");
                             return;
                         }
                         console.log('error');
@@ -108,18 +108,18 @@
                                 "temps": 5
                             }
                         ];
-                        
-                        
-                        $.get("../sectionTemplate.html", function(html_string){
-                          var template = html_string;
-                          Mustache.parse(template);   // optional, speeds up future uses
-                          var rendered = "";
-                          for (var i = 0; i < results.length; i++)  {
-                            rendered += Mustache.render(template, results[i]);
-                          }
-                          
-                          $('#target').html(rendered);
-                         },'html');
+
+
+                        $.get("../sectionTemplate.html", function(html_string) {
+                            var template = html_string;
+                            Mustache.parse(template); // optional, speeds up future uses
+                            var rendered = "";
+                            for (var i = 0; i < results.length; i++) {
+                                rendered += Mustache.render(template, results[i]);
+                            }
+
+                            $('#target').html(rendered);
+                        }, 'html');
                     }
                 });
             }

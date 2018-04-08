@@ -1545,6 +1545,22 @@ textarea {
     line-height: 1.65;
 }
 
+.discover {
+    margin-left: 25%;
+    width: 50%;
+}
+
+@media screen and (max-width: 940px) {
+    .discover {
+        width: 100% !important;
+        margin-left: 0px !important;
+    }
+    #banner2 {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+}
+
 @media screen and (max-width: 1680px) {
     body,
     input,
@@ -2670,6 +2686,86 @@ button:disabled,
 }
 
 body.is-loading #banner .content {
+    opacity: 0;
+    -moz-transform: translateY(1em);
+    -webkit-transform: translateY(1em);
+    -ms-transform: translateY(1em);
+    transform: translateY(1em);
+}
+
+
+/* banner2 */
+
+#banner2 {
+    padding: 18em 0 16em 0;
+    background-image: url(../../images/cooking.png);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+#banner2 .content {
+    -moz-transition: opacity 1s ease-in-out, -moz-transform 0.75s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out, -webkit-transform 0.75s ease-in-out;
+    -ms-transition: opacity 1s ease-in-out, -ms-transform 0.75s ease-in-out;
+    transition: opacity 1s ease-in-out, transform 0.75s ease-in-out;
+    opacity: 1;
+}
+
+#banner2 h1 {
+    font-size: 3em;
+    color: #25a2c3;
+    line-height: 1em;
+    margin: 0 0 0.5em 0;
+    padding: 0;
+}
+
+#banner2 p {
+    font-size: 1.25em;
+    margin-bottom: 1.75em;
+}
+
+@media screen and (max-width: 1280px) {
+    #banner2 {
+        padding: 18em 0 14em 0;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    #banner2 {
+        padding: 18em 10em 10em 10em;
+    }
+    #banner2 br {
+        display: none;
+    }
+    #banner2 h1 {
+        font-size: 2.25em;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    #banner2 {
+        padding: 18em 8em 8em 8em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #banner2 {
+        padding: 18em 6em 6em 6em;
+    }
+    #banner2 h1 {
+        font-size: 2em;
+    }
+    #banner2 p {
+        font-size: 1em;
+    }
+    #banner2 .button {
+        font-size: .9em;
+    }
+}
+
+body.is-loading #banner2 .content {
     opacity: 0;
     -moz-transform: translateY(1em);
     -webkit-transform: translateY(1em);
