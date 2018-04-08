@@ -1,25 +1,18 @@
-<section class="section">
-    <div class="section__content">
-        <h2 class="section__title" style="color:#25a2c3">{{plat}}</h2>
+<div class="row" style="background-color: beige;margin-bottom:0px">
+    <div class="row">
+        <div class="col s8 offset-s2">
+            <div class="card">
+                <div class="card-image" style="min-height:400px">
+                    <img src="images/kitchen.png" style="max-height: 400px;position:absolute;left:50%;transform:translateX(-50%)">
+                    <span class="card-title" style="color:#25a2c3;background-color: white;border-radius: 10px;">{{plat}} en {{ temps }}min</span>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="section__img">
-        <div class="section__img-inner" style="background-image: url({{images}})"></div>
-    </div>
+</div>
 
-    <div class="section__expander"></div>
-    <ul class="section__facts">
-        <li class="section__facts-item">
-            <h3 class="section__facts-title">Calory : {{ calory }}</h3>
-        </li>
-        <li class="section__facts-item">
-            <h3 class="section__facts-title">Sante : {{ sante }}</h3>
-        </li>
-        <li class="section__facts-item">
-            <h3 class="section__facts-title">Facilite : {{ facilite }}</h3>
-        </li>
-        <li class="section__facts-item">
-            <h3 class="section__facts-title">Temps : {{ temps }}</h3>
-        </li>
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
 
-    </ul>
-</section>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
